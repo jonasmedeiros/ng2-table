@@ -43,22 +43,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
                             </a>
                         </div>
                     </ng-container>
-
-                    <ng-container *ngIf="column.actions.type === 'dropdown'">
-                        <div class="btn-group" dropdown>
-                        <button id="single-button" type="button" [className]="column.actions.dropdownStyleClass" dropdownToggle>
-                           {{ column.actions.dropdownTitle }} <span class="caret"></span>
-                        </button>
-                        <ul dropdownMenu role="menu" aria-labelledby="single-button">      
-                            <li role="menuitem" *ngFor="let actionButton of column.actions.buttons">
-                                <a class="dropdown-item" (click)="actionClick(actionButton.action, row, column)">
-                                    <i class="" ngClass="{{actionButton.styleIcon || ''}}"></i> {{ actionButton.title }}
-                                </a>
-                            </li>                             
-                        </ul>
-                        </div>                        
-                    </ng-container>
-            
+           
                 </td>            
             </ng-container>
         </tr>
